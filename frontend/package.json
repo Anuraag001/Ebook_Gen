@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mammoth": "^1.7.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^3.0.0"
+  }
+}
