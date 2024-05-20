@@ -14,4 +14,7 @@ def generate_response(Request,Email,Pass):
     return chatbot.chat(Request)
 
 if __name__=='__main__':
-    print(generate_response("give 12 chapter names on a book 'programming languages' ",hfEmail,hfPass))
+    title='game of cricket'
+    description='how to play'
+    chapterCount=12
+    print(generate_response(f'Title:"{title}" Description:"{description}" No of chapters:{chapterCount}  Give only chapter names in numbered order',hfEmail,hfPass))

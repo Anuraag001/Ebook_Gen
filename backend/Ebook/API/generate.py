@@ -9,11 +9,13 @@ def generate_file(title,description,chapterCount):
     #secrets=dotenv_values("cred.env")
     hfEmail="anuraagbv1@gmail.com"
     hfPass="HuggingFace01"
-    result=generate_response(f"give {chapterCount} chapter names on a book '{title}' only names like 1. '...' 2.'...'",hfEmail,hfPass)
+    result=generate_response(f'Title:"{str(title)}" Description:"{str(description)}" No of chapters:{int(chapterCount)}  Give only chapter names in numbered order',hfEmail,hfPass)
+    print(result)
     result=str(result)
-    img=generateImage(title,"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")
+    img=generateImage(str(title),"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")
     img.save('test.png')
     chapter_names = re.findall(r'\d+\.\s*"([^"]+)"', result)
+    print(chapter_names)
     setCoverPage(doc,image="test.png")
     add_chapter_names(doc,chapter_names)
     save(doc)

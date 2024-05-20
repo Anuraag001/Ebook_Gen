@@ -37,5 +37,9 @@ def generate(request):
     
 @api_view(['GET'])
 def getfinal(request):
+    title='cricket game'
+    description='how to play'
+    chapterCount=12
+    print(title,description,chapterCount)
     generate_file(title,description,chapterCount)
     return Response({'message': 'Received the data'})
